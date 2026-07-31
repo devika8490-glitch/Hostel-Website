@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .register-container {
+      padding: 30px;
+      border-radius: 15px;
+      width: 320px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      backdrop-filter: blur(6px);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover {
+      background: #2980b9;
+      transition: background 0.3s ease;
+    }
+    .error {
+      color: #ff4d4d;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    a {
+      color: #00acee;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>Register</h2>
+    <form onsubmit="return registerUser(event)">
+      <div class="error" id="registerError"></div>
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password (min 6 characters)" required />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+      <button type="submit">Register</button>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </div>
+
+  <script>
+    function registerUser(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      const errorDiv = document.getElementById("registerError");
+
+      errorDiv.textContent = "";
+
+            if (password.length < 6) {
+        errorDiv.textContent = "Password must be at least 6 characters long.";
+        return false;
+      }
+
+      if (password !== confirmPassword) {
+        errorDiv.textContent = "Passwords do not match.";
+        return false;
+      }
+
+            localStorage.setItem("user", JSON.stringify({ name, email, password }));
+      alert("Registered successfully!");
+      window.location.href = "login.html";  
+      return true;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hostel Booking Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+background: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267') no-repeat center center fixed;
+      background-size: cover;
+
+
+    }
+
+    
+    
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d9ff;
+    }
+.section {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 900px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+    }
+
+ 
+       .form-box {
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 900px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+footer {
+      text-align: center;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 0.9em;
+      margin-top: 40px;
+color: #fff;
+    }
+.container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .room-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .room-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #4a4e69;
+        }
+
+        /* Styling for the room cards */
+        .room-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .room-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: 300px;
+            text-align: left;
+        }
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .room-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .room-card-content {
+            padding: 25px;
+        }
+        .room-card-content h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #222;
+        }
+        .room-card-content p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #666;
+        }
+        .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #7b2cbf;
+            margin: 15px 0;
+        }
+        .book-button {
+            display: inline-block;
+            background-color: #7b2cbf;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .book-button:hover {
+            background-color: #5a1f8c;
+        }
+
+               @media (max-width: 768px) {
+            .room-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .room-card {
+                width: 90%;
+            }
+        }
+    
+
+  </style>
+</head>
+<body>
+   <header>
+
+    <h1>DreamStay Hostel-Booking</h1>
+  </header>
+
+<section>
+
+<nav>
+     <a href="home.html">Home</a>
+     <a href="about.html">About us</a>
+    <a href="Facilities.html">Facilities</a>
+    <a href="Booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+</div>
+</section>
+
+    <div class="form-box">
+      <h2>Book Your Stay</h2>
+      <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="room">Room Type</label>
+        <select id="room" required>
+          <option value="">-- Select Room --</option>
+          <option value="single">Single Room</option>
+          <option value="double">Double Sharing</option>
+          <option value="triple">Triple Sharing</option>
+        </select>
+
+        <label for="message">Special Request</label>
+        <textarea id="message" rows="4" placeholder="Any special request..."></textarea>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("form button[type='submit']").click(function(e){
+    e.preventDefault(); 
+    alert("Booking Successful!");
+  });
+
+  $(".book-button").click(function(e){
+    e.preventDefault();
+    alert("Booking Successful!");
+  });
+});
+</script>
+
+
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+  </div>
+<section class="room-section">
+<div class="container">
+            <h2>Our Room Types</h2>
+            <div class="room-cards">
+
+              
+                <div class="room-card">
+                    <img src="C:\Users\Devika\Desktop\Hostel Website\images\1bed.avif" alt="A clean, cozy single room with a bed and a window.">
+                    <div class="room-card-content">
+                        <h3>Single Room</h3>
+                        <p>Enjoy a private, quiet space perfect for solo travelers. Includes a single bed, a desk, and a wardrobe.</p>
+                        <div class="price">Starts from ₹24,000 / <br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp1 year </div>
+                        <a href="#" class="book-button">Book Now</a>
+                    </div>
+                </div>
+
+               
+                <div class="room-card">
+                    <img src="C:\Users\Devika\Desktop\Hostel Website\images\2 bed.webp">
+                    <div class="room-card-content">
+                        <h3>2-Sharing Room</h3>
+                        <p>A comfortable twin room with two separate beds, ideal for friends or couples traveling together.</p>
+                        <div class="price">Starts from ₹20,000 /<br>&nbsp&nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp1 year </div>
+                        <a href="#" class="book-button">Book Now</a>
+                    </div>
+                </div>
+  <div class="room-card">
+                    <img src="C:\Users\Devika\Desktop\Hostel Website\images\3bed.jpg">
+                    <div class="room-card-content">
+                        <h3>3-Sharing Room</h3>
+                        <p>Spacious accommodation with three beds, perfect for small groups. Includes lockers for personal belongings.</p>
+                        <div class="price">Starts from  ₹16,000 / <br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp1 year </div>
+                        <a href="#" class="book-button">Book Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+    &copy; 2025 DreamStay Hostel. All rights reserved.
+  </footer>
+
+</body>
+</html>

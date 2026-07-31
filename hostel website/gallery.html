@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hostel Gallery</title>
+  <style>
+
+      body {
+       background: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267') no-repeat center center fixed;
+      background-size: cover;
+      
+
+
+    }
+
+     header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+     header h1 {
+      font-size: 2.5em;
+      color: #fff;
+    }
+
+
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d9ff;
+    }
+
+
+    .gallery-section {
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .gallery-section h2 {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #004d4d;
+      color: white;
+      padding: 20px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DreamStay Hostel  – Gallery</h1>
+  </header>
+
+ <nav>
+     <a href="home.php">Home</a>
+     <a href="about.php">About us</a>
+    <a href="Facilities.php">Facilities</a>
+    <a href="Booking.php">Booking</a>
+    <a href="contact.php">Contact</a>
+
+  </nav>
+
+
+
+
+
+
+  <section class="gallery-section">
+    <h2>Explore Our Hostel Environment</h2>
+    <div class="gallery-grid">
+      <img src="https://images.unsplash.com/photo-1590490360183-0318ea82d88b?auto=format&fit=crop&w=800&q=80" alt="Spacious Hostel Room" />
+      <img src="https://images.unsplash.com/photo-1585559602374-d3d9b6a9e447?auto=format&fit=crop&w=800&q=80" alt="Clean Bathrooms" />
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80" alt="Study Lounge" />
+      <img src="https://images.unsplash.com/photo-1560448075-bb5c8a0e0c0c?auto=format&fit=crop&w=800&q=80" alt="Common Room" /><br>
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Modern Kitchen" />
+      <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=800&q=80" alt="Events and Celebrations" />
+    </div>
+  </section>
+
+  <footer>
+    © 2025 DreamStay Hostel . All Rights Reserved.
+  </footer>
+
+</body>
+</html>

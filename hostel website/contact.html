@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Hostel Name</title>
+  <style>
+    :root {
+      --primary-color: #0d1f3c;
+      --secondary-color: #ffffff;
+      --accent-color: #1a73e8;
+      --font-sans: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    }
+    body { margin: 0; font-family: var(--font-sans); color: var(--primary-color); background: var(--secondary-color); }
+    header, footer { background: var(--primary‑color); color: var(--secondary‑color); text-align: center; padding: 2rem 1rem; }
+    header h1 { margin: 0; font-size: 2rem; }
+    footer p { margin: 0; font-size: 0.9rem; }
+    main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+    section { margin-bottom: 2rem; }
+    section h2 { font-size: 1.5rem; border-bottom: 3px solid var(--accent-color); padding-bottom: 0.5rem; }
+    .info-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1rem; }
+    @media(min-width: 600px) { .info-grid { grid-template-columns: repeat(2, 1fr); } }
+    .info-item { line-height: 1.5; }
+    .info-item span.label { font-weight: 600; color: var(--accent-color); }
+ {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+background: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267') no-repeat center center fixed;
+      background-size: cover;
+
+
+    }
+
+    
+    
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00d9ff;
+    }
+.section {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 900px;
+      border-radius: 15px;
+      backdrop-filter: blur(5px);
+    }
+footer {
+      text-align: center;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 0.9em;
+      margin-top: 40px;
+color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+
+    <h1>DreamStay Hostel-Contact</h1>
+  </header>
+<section>
+<div class="container">
+<nav>
+     <a href="home.html">Home</a>
+     <a href="about.html">About us</a>
+    <a href="Facilities.html">Facilities</a>
+    <a href="Booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+</div>
+</section>
+<div class="section">
+  <main>
+    <section>
+      <h2>Contact Information</h2>
+      <div class="info-grid">
+        <div class="info-item"><span class="label">📞 Phone:</span><br /> +91 98765 43210</div>
+        <div class="info-item"><span class="label">✉️ Email:</span><br /> dreamstayhostel@gmail.com</div>
+        <div class="info-item"><span class="label">📍 Address:</span><br /> DreamStay hostel,Masur Road, Karād, Maharashtra, India – 415110</div>
+        <div class="info-item"><span class="label">🕒 Hours:</span><br /> Mon–Sun: 7AM – 7PM</div>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Send Us a Message</h2>
+      <form action="#" method="post">
+        <p><label>Name:<br /><input type="text" name="name" required style="width:100%" /></label></p>
+        <p><label>Email:<br /><input type="email" name="email" required style="width:100%" /></label></p>
+        <p><label>Message:<br /><textarea name="message" rows="5" required style="width:100%"></textarea></label></p>
+        <p><button type="submit" style="background: var(--accent-color); color: var(--secondary-color); border:none; padding: 0.75rem 1.5rem; cursor:pointer;">Submit</button></p>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("form button[type='submit']").click(function(e){
+    e.preventDefault(); 
+    alert("Message Send Successful!");
+  });
+
+  $(".submit-button").click(function(e){
+    e.preventDefault();
+    alert("Message Send Successful!");
+  });
+});
+</script>
+
+
+      </form>
+    </section>
+  </main>
+</div>
+
+ 
+    <footer>
+    &copy; 2025 DreamStay Hostel. All rights reserved.
+  </footer>
+
+</body>
+</html>
